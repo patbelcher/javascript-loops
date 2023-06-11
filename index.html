@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        body.green-background {
+        background-color: green;
+        }
+    </style>  
+  
+</head>
+<body>
+    <h1>Output a  for loop</h1>
+
+    <h3 id="output"></h3>
+<script>
+const output = document.getElementById("output");
+/*
+for(let i = 0; i <= 5; i++) {
+    output.innerHTML +=  i + "<br>";
+
+    if (i === 5) {
+        document.body.classList.add("green-background");
+      }
+} */
+
+function loopWithDelay(i) {
+      setTimeout(function() {
+        output.innerHTML += "i: " + i + "<br>";
+
+        if (i < 5) {
+          loopWithDelay(i + 1);
+        }
+        if (i === 5) {
+        document.body.classList.add("green-background");
+      }
+      }, 1000); // Delay of 1000 milliseconds (1 second)
+    }
+
+    loopWithDelay(0);
+
+    
+
+
+
+</script>    
+</body>
+</html>
