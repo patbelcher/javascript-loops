@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food list</title>
+</head>
+<body>
+    <ul id="foodList"></ul>
+    
+    <script>
+        const foods = ["Pizza", "Wings", "Ice Cream", "Waffles", "Pancakes"];
+        const foodList = document.getElementById("foodList");
+
+        for (let i = 0; i < foods.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = foods[i];
+            foodList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
